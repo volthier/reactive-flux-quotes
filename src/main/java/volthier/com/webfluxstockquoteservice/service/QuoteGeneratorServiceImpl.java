@@ -36,8 +36,6 @@ public class QuoteGeneratorServiceImpl implements QuoteGeneratorService {
 
     }
 
-
-
     @Override
     public Flux<Quote> fetchQuoteStream(Duration period) {
         return Flux.generate(() -> 0,
@@ -51,7 +49,6 @@ public class QuoteGeneratorServiceImpl implements QuoteGeneratorService {
                     quote.setInstant(Instant.now());
             return quote;
         }).log("volthier.com.BRulz");
-
     }
 
     private Quote updatedQuote(Quote quote){
