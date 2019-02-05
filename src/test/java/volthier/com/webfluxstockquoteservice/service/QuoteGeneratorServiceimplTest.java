@@ -23,7 +23,7 @@ public class QuoteGeneratorServiceimplTest {
         //get quoteFlux of quotes
         Flux<Quote> quoteFlux = quoteGeneratorService.fetchQuoteStream(Duration.ofMillis(100L));
 
-        quoteFlux.take(10).subscribe(System.out::println);
+        quoteFlux.take(100).subscribe(System.out::println);
 
         //Thread.sleep(10000);
     }
